@@ -23,8 +23,8 @@
 
 ## Demo
 
-![AI Resume Builder Screenshot]([./assets/demo_screenshot.png](https://github.com/KumarSachin-DS/AI_resume_builder/blob/main/Demo_screenshot.png))  
-*Screenshot of the app UI. Update this path when you add your own screenshot.*
+![AI Resume Builder Screenshot]([./assets/demo_screenshot.png](https://github.com/KumarSachin-DS/AI_resume_builder/blob/main/Demo_screenshot.png)  
+*Screenshot of the app UI.*
 
 ---
 
