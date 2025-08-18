@@ -4,9 +4,19 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_huggingface import HuggingFaceEmbeddings
 
-# Load environment variables
+# Load .env variables if present (won't raise if missing)
 load_dotenv()
+
+# Try getting key from environment variables first
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# Fallback to Streamlit secrets if not found in env
+if not OPENAI_API_KEY:
+    OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", None)
+
+if not OPENAI_API_KEY:
+    st.error("OpenAI API key not found. Please set in .env or Streamlit secrets.")
+    st.stop()
 
 @st.cache_resource
 def initialize_components():
